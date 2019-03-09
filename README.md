@@ -6,6 +6,9 @@ By sticking to a few guidelines, the library will own setting and getting the va
 ## Early Availability Version
 Note: This library is still being updated. Make sure to follow this repository or follow my [twitter/discord](http://barraider.github.io) updates to get notified when it changes.
 
+### Download
+[Early Availability Version](https://github.com/BarRaider/streamdeck-easypi/raw/master/src/sdtools.common.js)
+
 
 ## Usage
 ### Common Use-case
