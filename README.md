@@ -9,11 +9,14 @@ Note: This library is still being updated. Make sure to follow this repository o
 
 ## Usage
 ### Common Use-case
-This section is relevant for the majority of controls. There are a few different controls (such as the CheckBox or FilePicker) that require additional steps, as indicated below.
-Example:
+This section is relevant for the majority of controls. There are a few different controls (such as the CheckBox or FilePicker) that require additional steps, as indicated below.   
+Example1:  
 ```
 <input class="sdProperty" id="lastName" oninput="setSettings()">
+```
 
+Example2:  
+```
  <select class="sdProperty" id="refreshSeconds" oninput="setSettings()">
 	<option value="1">1 Second</option>
 	<option value="15">15 Seconds</option>
