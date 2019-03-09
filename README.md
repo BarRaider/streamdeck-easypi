@@ -8,7 +8,7 @@ Note: This library is still being updated. Make sure to follow this repository o
 
 
 ## Usage
-### Common Usecase
+### Common Use-case
 This section is relevant for the majority of controls. There are a few different controls (such as the CheckBox or FilePicker) that require additional steps, as indicated below.
 Example:
 ```
@@ -25,9 +25,15 @@ Example:
 There are three things needed for the library to work correctly (as demonstrated in the example above):
 1. Each property must have an ***id*** field. The id must be identical to the name of the property in the payload. In the example above, the library will pass two settings, one named ***lastName*** and one named ***refreshSeconds***. The library will also look for those names to populate the values when new data is received.
 
-2. The property must also have a class called ***sdProperty***. It can have additional classes too, but this one must be there too.
+2. The property must also have a class called ***sdProperty***. The control can have additional classes too, but this one must be there.
 
 3. Add an ***oninput="setSettings()"*** section to the control, to ensure settings are saved as soon as a user changes input.
 
+## CheckBox
+To get data to and from checkboxes add an additional class named **sdCheckbox** _in addition_ to the sdProperty indicated above.
+
+```
+<input id="enterMode" type="checkbox" class="sdProperty sdCheckbox" oninput="setSettings()">
+```
 
 
