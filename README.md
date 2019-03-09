@@ -53,4 +53,34 @@ To support filepickers, as recommended in the SDK follow the following guideline
 1. On the input class, add an additional class named **sdFile** _in addition_ to the sdProperty indicated above.
 2. Add a label, as indicated above. Make sure the Id of the label has a ***Filename*** suffix (If the input is called userImage than the label is named userImageFilename)
 
+## Events
+The library currently sends out two events
+### websocketCreate
+This event will be triggered as soon as a websocket is created with the StreamDeck.
+Subscribe by using: 
+```
+document.addEventListener('websocketCreate', function () {
+	console.log("Websocket created!");
+	...
+});
+```
 
+You can also subscribe to the websocket events as part of this event:
+
+```
+document.addEventListener('websocketCreate', function () {
+	websocket.addEventListener('message', function (event) {
+		console.log("Got message event!");
+	});
+});
+```
+
+### settingsUpdated
+This even will be triggered when a new payload of settings is sent from the PI to the Plugin itself.
+Subscribe by using: 
+
+```
+document.addEventListener('settingsUpdated', function (event) {
+    console.log("Got settingsUpdated event!");
+});
+```
