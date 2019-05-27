@@ -53,6 +53,19 @@ To support filepickers, as recommended in the SDK follow the following guideline
 1. On the input class, add an additional class named **sdFile** _in addition_ to the sdProperty indicated above.
 2. Add a label, as indicated above. Make sure the Id of the label has a ***Filename*** suffix (If the input is called userImage than the label is named userImageFilename)
 
+### NEW! Dropdown lists
+v1.0 now supports passing a dynamic list to be shown in a dropdown. In addition, you can choose the name of the field that will hold value selected by the user.
+To support dynamic dropdown lists, follow the following guidelines:
+
+```
+<select class="sdpi-item-value select sdProperty sdList" id="sounds" oninput="setSettings()" sdListTextProperty="soundName" sdListValueProperty="soundIndex" sdValueField="soundTitle"></select>
+```
+
+1. On the select class, add an additional class named **sdList** _in addition_ to the sdProperty indicated above.
+2. Add an attribute named **sdListTextProperty** which is the name of the *property* for each item in the list that holds the text you want to show in the dropdown
+3. Add an attribute named **sdListValueProperty** which is the name of the *property* for each item in the list that holds the value you want to return when an item is selected
+4. Add an attribute named **sdValueField** which is the name of a property in the payload which will be used to both retreive the selected value and store it back if the user chooses another option in the dropdown.
+
 ## Events
 The library currently sends out two events
 ### websocketCreate
