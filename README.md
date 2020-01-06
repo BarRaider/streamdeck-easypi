@@ -4,7 +4,10 @@ This library is meant to simplify the communication between the Property Inspect
 By sticking to a few guidelines, the library will own setting and getting the various settings for your plugin.
 
 ## Early Availability Version
-Note: This library is still being updated. Make sure to follow this repository or follow my [twitter/discord](http://barraider.github.io) updates to get notified when it changes.
+Note: This library is still being updated. Make sure to follow this repository or follow my [twitter/discord](https://barraider.com) updates to get notified when it changes.
+
+## New in v1.1
+- New `sdHTML` allows sending HTML from the plugin to the InnerHTML property of an element in the Property Inspector. (See the `HTML Elements` section below)
 
 ### Download
 [Early Availability Version](https://github.com/BarRaider/streamdeck-easypi/raw/master/src/sdtools.common.js)
@@ -50,7 +53,7 @@ To support filepickers, as recommended in the SDK follow the following guideline
 <label class="sdpi-file-info " for="userImage1" id="userImageFilename">No file...</label>
 ```
 
-1. On the input class, add an additional class named **sdFile** _in addition_ to the sdProperty indicated above.
+1. On the input element, add an additional class named **sdFile** _in addition_ to the sdProperty indicated above.
 2. Add a label, as indicated above. Make sure the Id of the label has a ***Filename*** suffix (If the input is called userImage than the label is named userImageFilename)
 
 ### NEW! Dropdown lists
@@ -61,10 +64,20 @@ To support dynamic dropdown lists, follow the following guidelines:
 <select class="sdpi-item-value select sdProperty sdList" id="sounds" oninput="setSettings()" sdListTextProperty="soundName" sdListValueProperty="soundIndex" sdValueField="soundTitle"></select>
 ```
 
-1. On the select class, add an additional class named **sdList** _in addition_ to the sdProperty indicated above.
+1. On the select element, add an additional class named **sdList** _in addition_ to the sdProperty indicated above.
 2. Add an attribute named **sdListTextProperty** which is the name of the *property* for each item in the list that holds the text you want to show in the dropdown
 3. Add an attribute named **sdListValueProperty** which is the name of the *property* for each item in the list that holds the value you want to return when an item is selected
 4. Add an attribute named **sdValueField** which is the name of a property in the payload which will be used to both retreive the selected value and store it back if the user chooses another option in the dropdown.
+
+### New! HTML Elements
+v1.1 supports passing HTML to be shown in the InnerHTML property of an element in the Property Inspector.
+To support HTML elements, follow the following guidelines:
+
+```
+<span class="sdHTML sdProperty sdpi-item-value" id="myHtmlElement"></span>
+```
+
+1. On the div/span element, add an additional class named **sdHTML** _in addition_ to the sdProperty indicated above.
 
 ## Events
 The library currently sends out two events
