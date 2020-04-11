@@ -1,4 +1,4 @@
-﻿// sdtools.common.js v1.1
+﻿// sdtools.common.js v1.2
 var websocket = null,
     uuid = null,
     registerEventName = null,
@@ -184,7 +184,7 @@ function openWebsite() {
         const json = {
             'event': 'openUrl',
             'payload': {
-                'url': 'https://BarRaider.github.io'
+                'url': 'https://BarRaider.com'
             }
         };
         websocket.send(JSON.stringify(json));
