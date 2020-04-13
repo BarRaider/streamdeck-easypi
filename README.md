@@ -1,16 +1,17 @@
-# streamdeck-easypi
+# StreamDeck EasyPI
 
 This library is meant to simplify the communication between the Property Inspector and your plugin.
 By sticking to a few guidelines, the library will own setting and getting the various settings for your plugin.
 
-## Early Availability Version
-Note: This library is still being updated. Make sure to follow this repository or follow my [twitter/discord](https://barraider.com) updates to get notified when it changes.
+## Help / Support
+Make sure to star this repository or follow my [twitter](https://twitter.com/realBarRaider) to get notified when it changes.
+***Questions, Suggestions, and Support via [Discord](http://discord.barraider.com) ***
 
 ## New in v1.1
 - New `sdHTML` allows sending HTML from the plugin to the InnerHTML property of an element in the Property Inspector. (See the `HTML Elements` section below)
 
 ### Download
-[Early Availability Version](https://github.com/BarRaider/streamdeck-easypi/raw/master/src/sdtools.common.js)
+* [Download](https://github.com/BarRaider/streamdeck-easypi/raw/master/src/sdtools.common.js)
 
 
 ## Usage
