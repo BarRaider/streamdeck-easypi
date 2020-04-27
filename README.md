@@ -132,6 +132,8 @@ To use:
 </div>
 ```  
 3. For the actual range <input> add the `class="sdProperty"` and the `data-suffix`. You can use `data-suffix` to decide what to show after the number (such as %, 'ms', etc.)
-4. Add the following line somewhere in your HTML file:
-`<div class="sdpi-info-label hidden" style="top: -1000;" value="">Tooltip</div>`
+4. Add the following line somewhere in your HTML file:  
+```
+<div class="sdpi-info-label hidden" style="top: -1000;" value="">Tooltip</div>
+```
 		
