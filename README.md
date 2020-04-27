@@ -7,8 +7,8 @@ By sticking to a few guidelines, the library will own setting and getting the va
 Make sure to star this repository or follow my [twitter](https://twitter.com/realBarRaider) to get notified when it changes.  
 **Questions, Suggestions, and Support via [Discord](http://discord.barraider.com)**
 
-## New in v1.1
-- New `sdHTML` allows sending HTML from the plugin to the InnerHTML property of an element in the Property Inspector. (See the `HTML Elements` section below)
+## New in v1.3
+- Introducing rangedTooltip.js - Instructions how to use it in the ***Ranged Tooltip*** section below
 
 ### Download
 * [Download](https://github.com/BarRaider/streamdeck-easypi/raw/master/src/sdtools.common.js)
@@ -111,3 +111,27 @@ document.addEventListener('settingsUpdated', function (event) {
     console.log("Got settingsUpdated event!");
 });
 ```
+
+### Ranged Tooltip
+The rangedTooltip.js library allows you to see a tooltip of the current value when modifying a range element.
+To use:
+1. Add `<script src="rangeTooltip.js"></script>` and `<link rel="stylesheet" href="rangeTooltip.css">` to the <head> section  
+2. Create a div of `type="range"` and give it the `sdShowTooltip` class (as shown below). The example below will create a range of 1-200
+```
+<div type="range" class="sdpi-item sdShowTooltip" id="dvSpeed">
+	<div class="sdpi-item-label" id="speedLabel">Speed</div>
+	<div class="sdpi-item-value">
+		<span class="clickable" value="1">1</span>
+		<input type="range" min="1" max="200" value=100 list="numbers" data-suffix=" %" class="sdProperty" id="playSpeed" oninput="setSettings()">
+		<span class="clickable" value="200">200</span>
+		<datalist id="numbers">
+			<option>100</option>
+		</datalist>
+		<label for="playSpeed" class="rangeLabel"></label>
+	</div>
+</div>
+```  
+3. For the actual range <input> add the `class="sdProperty"` and the `data-suffix`. You can use `data-suffix` to decide what to show after the number (such as %, 'ms', etc.)
+4. Add the following line somewhere in your HTML file:
+`<div class="sdpi-info-label hidden" style="top: -1000;" value="">Tooltip</div>`
+		
