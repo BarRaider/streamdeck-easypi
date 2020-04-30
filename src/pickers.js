@@ -2,7 +2,7 @@
 // * EasyPI v1.3
 // * Author: BarRaider
 // *
-// * pickers.js adds support for plugin-side pickers.
+// * pickers.js - Adds support for plugin-side pickers.
 // *
 // * Project page: https://github.com/BarRaider/streamdeck-easypi
 // * Support: http://discord.barraider.com
