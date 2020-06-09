@@ -10,11 +10,23 @@ Make sure to star this repository or follow my [twitter](https://twitter.com/rea
 ## New in v1.3
 - Introducing rangedTooltip.js - Instructions how to use it in the ***Ranged Tooltip*** section below
 
-### Download
-* [Download](https://github.com/BarRaider/streamdeck-easypi/raw/master/src/sdtools.common.js)
+## How to use:
+Use the following tags in your Property Inspector HTML file to use the latest version:
+ - Core (sdtools.common.js):
+```
+<script src="https://cdn.jsdelivr.net/gh/barraider/streamdeck-easypi@latest/src/sdtools.common.js"></script>
+```  
+ - Core CSS (sdpi.css): 
+ ```
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/barraider/streamdeck-easypi@latest/src/sdpi.css">
+ ```  
+ - Range Tooltips (see usage examples below):
+```
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/barraider/streamdeck-easypi@master/src/rangeTooltip.css">
+<script src="https://cdn.jsdelivr.net/gh/barraider/streamdeck-easypi@master/src/rangeTooltip.js"></script>
+``` 
 
-
-## Usage
+## Tutorial
 ### Common Use-case
 This section is relevant for the majority of controls. There are a few different controls (such as the CheckBox or FilePicker) that require additional steps, as indicated below.   
 Example1:  
