@@ -17,6 +17,15 @@
     margin-left: 0px !important;
 }
 
+.iconLeft {
+    background-position: 0px 4px;
+}
+
+.summaryIconPadding
+{
+    padding-left:15px;
+}
+
 
 html {
   --sdpi-bgcolor: #2D2D2D;
