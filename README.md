@@ -69,8 +69,8 @@ To support filepickers, as recommended in the SDK follow the following guideline
 1. On the input element, add an additional class named **sdFile** _in addition_ to the sdProperty indicated above.
 2. Add a label, as indicated above. Make sure the Id of the label has a ***Filename*** suffix (If the input is called userImage than the label is named userImageFilename)
 
-### NEW! Dropdown lists
-v1.0 now supports passing a dynamic list to be shown in a dropdown. In addition, you can choose the name of the field that will hold value selected by the user.
+### Dropdown lists
+EasyPI supports passing a dynamic list to be shown in a dropdown. In addition, you can choose the name of the field that will hold value selected by the user.
 To support dynamic dropdown lists, follow the following guidelines:
 
 ```
@@ -82,8 +82,29 @@ To support dynamic dropdown lists, follow the following guidelines:
 3. Add an attribute named **sdListValueProperty** which is the name of the *property* for each item in the list that holds the value you want to return when an item is selected
 4. Add an attribute named **sdValueField** which is the name of a property in the payload which will be used to both retreive the selected value and store it back if the user chooses another option in the dropdown.
 
-### New! HTML Elements
-v1.1 supports passing HTML to be shown in the InnerHTML property of an element in the Property Inspector.
+#### Example of how this would look on the backend side:
+```
+[JsonProperty(PropertyName = "sounds")]
+public List<SoundData> Sounds { get; set; }
+
+[JsonProperty(PropertyName = "soundTitle")]
+public string SoundTitle { get; set; }
+```
+and `SoundData` would look like this:
+```
+class SoundData
+    {
+        [JsonProperty(PropertyName = "soundName")]
+        public string SoundName { get; set; }
+
+        [JsonProperty(PropertyName = "soundIndex")]
+        public int SoundIndex { get; set; }
+    }
+```
+
+
+### HTML Elements
+EasyPI supports passing HTML to be shown in the InnerHTML property of an element in the Property Inspector.
 To support HTML elements, follow the following guidelines:
 
 ```
