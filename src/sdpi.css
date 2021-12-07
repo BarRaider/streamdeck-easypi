@@ -9,12 +9,28 @@
     padding-left:33px !important;
 }
 
+.small {
+    font-size: 9pt !important;
+}
+
 .leftMargin10 {
     margin-left: 10px;
 }
 
 .leftMargin0 {
     margin-left: 0px !important;
+}
+
+.leftPadding3 {
+    padding-left: 3px !important;
+}
+
+.leftPadding0 {
+    padding-left: 0px !important;
+}
+
+.bright {
+    color:#d8d8d8;
 }
 
 .iconLeft {
@@ -24,6 +40,13 @@
 .summaryIconPadding
 {
     padding-left:15px;
+}
+
+.subMenu {
+    border-left: 1px dotted gray;
+    padding-left:15px;
+    max-width:96%;
+    background-color:#323232;
 }
 
 
