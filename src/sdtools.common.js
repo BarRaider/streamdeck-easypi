@@ -1,5 +1,5 @@
 ﻿// ****************************************************************
-// * EasyPI v1.3
+// * EasyPI v1.3.2
 // * Author: BarRaider
 // *
 // * JS library to simplify the communication between the 
@@ -52,11 +52,7 @@ function websocketOnMessage(evt) {
     // Received message from Stream Deck
     var jsonObj = JSON.parse(evt.data);
 
-    if (jsonObj.event === 'sendToPropertyInspector') {
-        var payload = jsonObj.payload;
-        loadConfiguration(payload);
-    }
-    else if (jsonObj.event === 'didReceiveSettings') {
+    if (jsonObj.event === 'didReceiveSettings') {
         var payload = jsonObj.payload;
         loadConfiguration(payload.settings);
     }
