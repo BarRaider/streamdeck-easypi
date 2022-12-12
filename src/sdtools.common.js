@@ -1,5 +1,5 @@
 ﻿// ****************************************************************
-// * EasyPI v1.3.3
+// * EasyPI v1.4
 // * Author: BarRaider
 // *
 // * JS library to simplify the communication between the 
