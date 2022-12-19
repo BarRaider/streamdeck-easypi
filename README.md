@@ -7,6 +7,9 @@ By sticking to a few guidelines, the library will own setting and getting the va
 Make sure to star this repository or follow my [twitter](https://twitter.com/realBarRaider) to get notified when it changes.  
 **Questions, Suggestions, and Support via [Discord](http://discord.barraider.com)**
 
+## New in v1.4
+- Updated styles  to match Elgato's
+
 ## New in v1.3
 - Introducing rangedTooltip.js - Instructions how to use it in the ***Ranged Tooltip*** section below
 
