@@ -75,7 +75,8 @@ function loadConfiguration(payload) {
             }
             else if (elem.classList.contains("sdFile")) { // File
                 var elemFile = document.getElementById(elem.id + "Filename");
-                elemFile.innerText = payload[key];
+                // Turn fake paths into file URIs
+                elemFile.innerText = decodeURIComponent(payload[key].replace("C:\\fakepath\\", "file:///"));
                 if (!elemFile.innerText) {
                     elemFile.innerText = "No file...";
                 }
@@ -124,11 +125,13 @@ function setSettings() {
             payload[key] = elem.value;
             if (!elem.value) {
                 // Fetch innerText if file is empty (happens when we lose and regain focus to this key)
-                payload[key] = elemFile.innerText;
+                // (don't forget to turn fake paths into file URIs).
+                payload[key] = decodeURIComponent(elemFile.innerText.replace("C:\\fakepath\\", "file:///"));
             }
             else {
-                // Set value on initial file selection
-                elemFile.innerText = elem.value;
+                // Set value on initial file selection (and turn fake paths to file URIs)                
+                elemFile.innerText = decodeURIComponent(elem.value.replace("C:\\fakepath\\", "file:///"));
+                payload[key] = decodeURIComponent(elem.value.replace("C:\\fakepath\\", "file:///"));
             }
         }
         else if (elem.classList.contains("sdList")) { // Dynamic dropdown
