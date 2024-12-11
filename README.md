@@ -25,8 +25,8 @@ Use the following tags in your Property Inspector HTML file to use the latest ve
  ```  
  - Range Tooltips (see usage examples below):
 ```
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/barraider/streamdeck-easypi@master/src/rangeTooltip.css">
-<script src="https://cdn.jsdelivr.net/gh/barraider/streamdeck-easypi@master/src/rangeTooltip.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/barraider/streamdeck-easypi@latest/src/rangeTooltip.css">
+<script src="https://cdn.jsdelivr.net/gh/barraider/streamdeck-easypi@latest/src/rangeTooltip.js"></script>
 ``` 
 
 ## Tutorial
